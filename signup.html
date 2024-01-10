@@ -1,0 +1,96 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ______________________________MAIN STYLE___________________________________________ -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- ______________________________BOOTSTRAP STYLE___________________________________________ -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <body>
+      <main class="bg-navy main h-100vh">
+        <div class="container pt-4">
+          <div class="box-shadow1 w-75 p-5 bg-navy text-center m-auto mt-4">
+            <h1 class="text-lightBlue mb-3">Smart Login System</h1>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="nameSignup"
+                placeholder="Enter Your Name"
+              />
+              <p id="userNameAlert" class="d-none text-danger">
+                Including at least 3 letters starting with capitale letter ad
+                umbers not allowed
+              </p>
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="emailSignup"
+                placeholder="Enter Your Email"
+              />
+              <p id="emailAlert" class="d-none text-danger">
+                name@example.come
+              </p>
+            </div>
+            <div class="mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="passwordSignup"
+                placeholder="Enter  Password"
+              />
+              <p id="passAlert" class="d-none text-danger">
+                you must strength yor password from 5-15 character
+              </p>
+            </div>
+            <p id="success" class="d-none">
+              <span class="text-success fw-medium fs-5">success</span>
+            </p>
+            <p id="required" class="d-none">
+              <span class="text-danger fw-medium fs-5"
+                >All inputs is required</span
+              >
+            </p>
+            <p id="nameexist" class="d-none">
+              <span class="text-danger fw-medium fs-5"
+                >name already exists</span
+              >
+            </p>
+            <p id="exist" class="d-none">
+              <span class="text-danger fw-medium fs-5"
+                >email already exists</span
+              >
+            </p>
+            <p id="tryAgain">
+              <span class="text-danger fw-medium fs-5 d-none">Try Again</span>
+            </p>
+            <a
+              class="btn btn-outline-info w-100 my-3 text-decoration-none"
+              id="loginBtn"
+              onclick="SignUp()"
+              >Sign Up</a
+            >
+            <p class="text-white">
+              Don’t have an account?<a
+                class="text-white text-decoration-none fw-bold"
+                href="./index.html"
+                >Signin</a
+              >
+            </p>
+          </div>
+        </div>
+      </main>
+      <script src="./js/main.js"></script>
+      <script src="./js/bootstrap.bundle.min.js"></script>
+    </body>
+  </body>
+</html>
