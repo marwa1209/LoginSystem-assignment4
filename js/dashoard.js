@@ -64,7 +64,7 @@ function addProduct() {
 
   localStorage.setItem("products", JSON.stringify(Products));
   display();
-  // clear();
+   clear();
 }
 
 // clear
