@@ -1,0 +1,28 @@
+
+.text-main{
+color: #157260
+}
+.w-20{
+    width: 20%;
+}
+.w-45{
+    width: 45%;
+}
+.container button{
+    color: #fff;
+        background-color: #157260;
+        border: 1px solid #fff !important;
+}
+.container button:hover {
+        color: #1c2532;
+            background-color: #fff;
+            border: 1px solid #157260 !important;
+}
+input:focus,
+textarea:focus{
+    background-color: #157260;
+    transform: scale(1.1);
+}
+#total::before{
+    content:"Total:";
+}

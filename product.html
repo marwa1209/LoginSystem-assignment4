@@ -1,0 +1,192 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product details</title>
+  <!--__________________________ BootStrap___________________________ -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!--__________________________ Main-Style___________________________ -->
+  <link rel="stylesheet" href=".//css/main.css" />
+  <!--__________________________ Web-Fonts___________________________ -->
+  <link rel="stylesheet" href="./css/all.min.css" />
+</head>
+
+<body>
+  <!-- ****************************nav*************************************** -->
+  <nav class="navbar navbar-expand-lg bg-light py-3 position-fixed w-100 h-auto z-2 bg-grey">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="logo">
+            <a class="navbar-brand p-1 m-0 fs-3" href="./index.html">GraceWrap</a><span class="text-green">.</span>
+          </div>
+          <div class="links">
+            <ul class="navbar-nav">
+              <li class="nav-item px-1">
+                <a class="nav-link" aria-current="page" href="./index.html#shop">Shop</a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" aria-current="page" href="./index.html#About">About</a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" aria-current="page" href="./index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="icons">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item px-1">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" aria-current="page" href="./Login.html">
+                  <i class="fa-regular fa-user"></i>
+                </a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" aria-current="page" href="./Cart.html">
+                  <i class="fa-solid fa-store"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="Product" class="py-5">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-md-6">
+          <figure>
+            <img src="./assets/images/product-1.webp" alt="product1-info" class=" img-fluid w-100" id="main-image" />
+            <div class="small-img-group d-flex justify-content-around my-4">
+              <img src="./assets/images/product-1.webp" width="100px" alt="product-1-sm-1"
+                class="rounded-3 small-img" />
+              <img src="./assets/images/product-1-sm-2.webp" width="100px" alt="product-1-sm-2"
+                class="rounded-3 small-img" />
+              <img src="./assets/images/product-1-sm-3.webp" width="100px" alt="product-1-sm-3"
+                class="rounded-3 small-img" />
+              <img src="./assets/images/product-1-sm-4.webp" width="100px" alt="product-1-sm-4"
+                class="rounded-3 small-img" />
+              <img src="./assets/images/product-1-sm-5.webp" width="100px" alt="product-1-sm-5"
+                class="rounded-3 small-img" />
+              <img src="./assets/images/product-1-sm-6.webp" width="100px" alt="product-1-sm-6"
+                class="rounded-3 small-img" />
+            </div>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <h1 class="pb-3" id="productName">TERRACOTTA SEDIMENT <br> ABAYA</h1>
+          <div class="stars pb-3">
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+          </div>
+          <p class="text-white pb-3" id="productPrice">$100.00 USD</p>
+          <div class="select-size mb-5">
+            <p class="text-white">Size</p>
+            <select name="size" id="size" class="w-50 p-3 rounded-5">
+              <option>Select Size</option>
+              <option>Xl</option>
+              <option>L</option>
+              <option>M</option>
+              <option>small</option>
+            </select>
+          </div>
+          <h4 class="text-green pb-4">About Me</h4>
+          <p class="text-white">Swirling hues of terracotta make for a mesmerizing Abaya that will have you hooked. Pair
+            with its matching sediment
+            hijab to elevate the look. A timeless silhouette abaya in an exquisite linen blend abaya, designed for
+            lightweight
+            comfort.</p>
+          <br>
+          <p class="text-white">Note: terrocotta sediment is a perfect match and previous sediment hijab is also a very
+            close match. Also pairs well
+            with spice vanilla and terra crepe chiffon</p>
+          <button class="border-0  btn w-100" onclick="AddToCart()">Add To Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container py-5">
+      <main class="main">
+        <div class="about">
+          <figure>
+            <img src="./assets/images/vela_logo2-vector-01.png" alt="Logo" />
+            <h2>GraceWrap.</h2>
+          </figure>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem
+            ipsum dolor sit.
+          </p>
+          <h3>Social Media</h3>
+          <ul>
+            <li>
+              <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="subscription">
+          <div class="subsc-mean">
+            <h3>Subscribe our Newsletter</h3>
+            <p>
+              Don't miss out on our latest menu updates and exclusive offers -
+              join our newsletter today and stay up-to-date with all things
+              GraceWrap!
+            </p>
+          </div>
+          <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="">Menu</a></li>
+              <li><a href="">Promo</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Testimonial</a></li>
+              <li><a href="">Our Partners</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-contact-details">
+          <h3>Get in Touch</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i><span>A108 Adam Street, New York, NY 535022 </span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i><a href="mailto:contact@example.com">marwa@example.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i><a href="tel:+1 5589 55488 55">+1 5589 55488 55</a>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </footer>
+    <script src="./js/script.js" type="module"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

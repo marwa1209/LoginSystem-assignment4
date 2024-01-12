@@ -2,43 +2,349 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <!-- ______________________________MAIN STYLE___________________________________________ -->
-    <link rel="stylesheet" href="./css/main.css" />
-    <!-- ______________________________BOOTSTRAP STYLE___________________________________________ -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-  </head>
-  <nav></nav>
-  <body onload="displayWelcome()">
-    <nav
-      class="bg-navy navbar navbar-expand-lg navbar-dark group py-3 box-shadow1"
-    >
-      <div class="container">
-        <div>
-          <a href="" class="navbar-brand">SMART LOGIN</a>
-        </div>
-        <div>
-          <a
-            href="./index.html"
-            class="nav-lik btn btn-outline-warning navbar-brand"
-            >Logout</a
-          >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-commerce</title>
+  <!--__________________________ BootStrap___________________________ -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <!--__________________________ Main-Style___________________________ -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <!--__________________________ Web-Fonts___________________________ -->
+  <link rel="stylesheet" href="./css/all.min.css" />
+</head>
+
+<body>
+  <!-- ****************************nav*************************************** -->
+  <nav class="navbar navbar-expand-lg bg-light py-3 position-fixed w-100 h-auto z-2 bg-grey">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex justify-content-between align-items-center  w-100">
+          <div class="logo ">
+            <a class="navbar-brand p-1 m-0 fs-3" href="#home">GraceWrap</a><span class="text-green">.</span>
+          </div>
+          <div class="links">
+            <ul class="navbar-nav ">
+              <li class="nav-item px-1">
+                <a class="nav-link " aria-current="page" href="#shop">Shop</a>
+              </li>
+              <li class="nav-item  px-1">
+                <a class="nav-link" aria-current="page" href="#About">About</a>
+              </li>
+              <li class="nav-item  px-1">
+                <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="icons">
+            <ul class="navbar-nav mb-2 mb-lg-0 ">
+              <li class="nav-item px-1">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" aria-current="page" href="./index.html">
+                  <i class="fa-regular fa-user"></i>
+                </a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link" aria-current="page" href="./Cart.html" target="_blank">
+                  <i class="fa-solid fa-store"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </nav>
-    <main class="bg-navy main h-100vh">
-      <div
-        class="container h-100 d-flex justify-content-center align-items-center"
-      >
-        <div class="box-shadow1 w-75 p-5 bg-navy text-center">
-          <h1 class="text-lightBlue" id="welcome"></h1>
+    </div>
+  </nav>
+  <section id="home">
+    <div class="container-fluid p-0">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner vh-100">
+          <div class="carousel-item active position-relative">
+
+            <img src="./assets/images/slide-1.png" class="d-block w-100" alt="image-1" />
+            <div class="slide1-content position-absolute top-50 start-0 px-5">
+              <h2>
+                Wrap Yourself in Confidence, <br />
+                Shine in Your Hijab.
+              </h2>
+              <a href="#shop" class="btn ">Shop Now</a>
+            </div>
+          </div>
+          <div class="carousel-item position-relative">
+            <img src="./assets/images/slide-2.png" class="d-block w-100" alt="image-2" />
+            <div class="slide2-content position-absolute top-50 start-0 px-5">
+              <h2>
+                Empower Your Style,<br /> Embrace Your Faith:
+                Shop Hijabs with Grace.
+
+              </h2>
+              <a href="#shop" class="btn ">Shop Now</a>
+            </div>
+          </div>
+          <div class="carousel-item position-relative">
+            <img src="./assets/images/slide-3.png" class="d-block w-100" alt="image-3" />
+            <div class="slide3-content position-absolute top-50 start-0 px-5">
+              <h2>
+
+                Draped in Elegance,<br /> Wrapped in Confidence: Your Hijab Haven
+              </h2>
+              <a href="#shop" class="btn ">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+  <section id="shop">
+    <div class="container py-5">
+      <div class="main-title py-5">
+        <h2>Shop</h2>
+        <p>Check <span> Our Shop </span></p>
+      </div>
+      <div class="row pb-5 text-center">
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-1.webp" class="card-img-top" alt="Product-1">
+            <span class="pe-5">terracotta sediment abaya </span><span> $100.00 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-2.webp" class="card-img-top" alt="Product-2">
+            <span class="pe-5">agate stone </span><span>$27.00 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-3.webp" class="card-img-top" alt="Product-3">
+            <span class="pe-5">black onyx silk chiffon </span><span> $37.99 USD</span>
+          </a>
         </div>
       </div>
-    </main>
-    <script src="./js/main.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-  </body>
+      <div class="row pb-5 text-center">
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/produc-4.webp" class="card-img-top" alt="Product-4">
+            <span class="pe-5">shadow grey silk chiffon </span><span> $40.00 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-5.webp" class="card-img-top" alt="Product-5">
+            <span class="pe-5">vanilla silk chiffon </span><span>$40.00 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-6.webp" class="card-img-top" alt="Product-6">
+            <span class="pe-5">sapphire sky </span><span> $13.99 USD</span>
+          </a>
+        </div>
+      </div>
+      <div class="row pb-5 text-center">
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-7.webp" class="card-img-top" alt="Product-7">
+            <span class="pe-5">oasis green</span><span> $14.80 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-8.webp" class="card-img-top" alt="Product-8">
+            <span class="pe-5">pearl stone </span><span>$19.00 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-9.webp" class="card-img-top" alt="Product-9">
+            <span class="pe-5">terra crimson </span><span> $17.99 USD</span>
+          </a>
+        </div>
+      </div>
+      <div class="row pb-5 text-center">
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-10.webp" class="card-img-top" alt="Product-10">
+            <span class="pe-5">natural stone jersey </span><span> $22.60 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-11.webp" class="card-img-top" alt="Product-11">
+            <span class="pe-5">saffron chai jersey </span><span>$20.10 USD</span>
+          </a>
+        </div>
+        <div class="col-md-4 ">
+          <a href="./product.html" target="_blank">
+            <img src="./assets/images/product-12.webp" class="card-img-top" alt="Product-12">
+            <span class="pe-5">denim ripple </span><span> $30.99 USD</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="About">
+    <div class="container py-5">
+      <div class="main-title py-5">
+        <h2>About</h2>
+        <p>Check <span> Our Story </span></p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-white flex-column d-flex my-auto">
+          <h3 class="">Our STORY</h3>
+          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium cumque accusamus nesciunt,
+            provident natus atque eaque laudantium aperiam veritatis saepe delectus iure labore, illo facere commodi sed
+            dolores
+            <br><br>. Quibusdam pariatur consequuntur rerum distinctio labore nemo tempore optio odio libero sint,
+            obcaecati alias inventore deserunt facere aliquam deleniti nihil maxime accusamus quisquam nobis
+            perspiciatis doloremque. Aut necessitatibus maiores animi iure ipsam debitis quia est similique natus qui
+            minus magnam, explicabo exercitationem illo eveniet possimus quam vel? Et aperiam ipsa sunt est ipsum
+            quaerat dolore accusamus distinctio,<br><br>
+            modi nobis illum soluta itaque vero officiis doloremque dolorum repellendus amet aut atque dignissimos?
+            Eveniet totam pariatur id? Inventore possimus tempora accusantium nulla molestias. Quidem, voluptate
+            molestias modi neque similique sit in earum asperiores placeat dignissimos ducimus vero labore dolore quis
+            et quasi, maxime error blanditiis vel. Est suscipit cupiditate similique nihil harum labore ea eveniet.
+            Explicabo, officia. Et, odio assumenda<br><br>
+            aliquam sed, quos illo commodi consequuntur maxime eos neque esse, dolorem quod cum tempore accusamus quae
+            voluptates alias dolor minima iste eius dignissimos velit consequatur sint. Obcaecati, repudiandae expedita
+            totam labore sequi impedit velit dicta. Odio, ipsa quod cumque quas, unde tenetur quis, minima mollitia et
+            eligendi quisquam obcaecati culpa? Magni, vel autem?
+          </P>
+        </div>
+        <div class="col-md-6 ">
+          <figure>
+            <img src="./assets/images/story-1.jpg" alt="our-story-1" class="w-100">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- C O N T A C T -->
+  <section id="contact" class="contact">
+    <div class="container py-5">
+      <div class="main-title py-5">
+        <h2>CONTACT</h2>
+        <p>Need Help ? <span> Contact Us </span></p>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.445785295115!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1681863129691!5m2!1sen!2sus"></iframe>
+      <div class="contact-details">
+        <div class="address">
+          <div class="icon">
+            <i class="fa-regular fa-map"></i>
+          </div>
+          <div class="address-content">
+            <h3>Our Address</h3>
+            <p>A108 Adam Street, New York, NY 535022</p>
+          </div>
+        </div>
+        <div class="email">
+          <div class="icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="email-content">
+            <h3>Email Us</h3>
+            <a href="mailto:marwa@example.com">contact@example.com </a>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="phone-content">
+            <h3>Call Us</h3>
+            <a href="tel:+1 5589 55488 55">+1 5589 55488 55 </a>
+          </div>
+        </div>
+        <div class="opening-hours">
+          <div class="icon">
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+          <div class="opening-content">
+            <h3>Opening Hours</h3>
+            <p>
+              <strong>Mon-Sat:</strong> 11AM - 23PM; <strong>Sunday:</strong>
+              Closed
+            </p>
+          </div>
+        </div>
+      </div>
+      <form>
+        <div class="input-group">
+          <input type="text" placeholder="Your Name" name="name" />
+          <input type="email" placeholder="Your Email" name="email" />
+        </div>
+        <input type="text" placeholder="Subject" name="subject" />
+        <textarea placeholder="Message" name="message"></textarea>
+        <button class="btn form-button w-25" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container py-5">
+      <main class="main">
+        <div class="about">
+          <figure>
+            <img src="./assets/images/vela_logo2-vector-01.png" alt="Logo">
+            <h2>GraceWrap.</h2>
+          </figure>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit.</p>
+          <h3>Social Media</h3>
+          <ul>
+            <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="subscription">
+          <div class="subsc-mean">
+            <h3>Subscribe our Newsletter</h3>
+            <p>Don't miss out on our latest menu updates and exclusive offers -
+              join our newsletter today and stay up-to-date with all things
+              GraceWrap!</p>
+          </div>
+          <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="">Menu</a></li>
+              <li><a href="">Promo</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Testimonial</a></li>
+              <li><a href="">Our Partners</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-contact-details">
+          <h3>Get in Touch</h3>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i><span>A108 Adam Street, New York, NY 535022 </span></li>
+            <li><i class="fa-solid fa-envelope"></i><a href="mailto:contact@example.com">marwa@example.com</a></li>
+            <li><i class="fa-solid fa-phone"></i><a href="tel:+1 5589 55488 55">+1 5589 55488 55</a></li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </footer>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>

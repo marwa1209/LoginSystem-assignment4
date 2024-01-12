@@ -14,7 +14,10 @@ var successMsg = document.getElementById("success");
 var FaildMssg = document.getElementById("tryAgain");
 var FillMessage = document.getElementById("FillMessage");
 var IncorrectMessage = document.getElementById("IncorrectMessage");
+var role = document.getElementById("role");
+var rolesignup = document.getElementById("rolesignup");
 var username = localStorage.getItem("sessionUserName");
+
 var usersContainer = [];
 if (localStorage.getItem("users") != null) {
   usersContainer = JSON.parse(localStorage.getItem("users"));
@@ -33,6 +36,7 @@ function SignUp() {
       name: nameSignupInput.value,
       email: emailSignupInput.value,
       password: paswordSignupInput.value,
+      role: rolesignup.value,
     };
     Users.push(user);
     localStorage.setItem("users", JSON.stringify(Users));
@@ -40,6 +44,10 @@ function SignUp() {
 
     successMsg.classList.remove("d-none");
     FaildMssg.classList.add("d-none");
+    nameexist.classList.add("d-none");
+    setTimeout(() => {
+      window.location = "index.html";
+    }, 2000);
   } else {
     FaildMssg.classList.remove("d-none");
     successMsg.classList.add("d-none");
@@ -142,21 +150,33 @@ function isExist() {
 function login() {
   if (emailInput.value == "" && passwordInput.value == "") {
     FillMessage.classList.remove("d-none");
+  } else {
+    IncorrectMessage.classList.remove("d-none");
   }
   for (let index = 0; index < Users.length; index++) {
     if (
       Users[index].email.toLowerCase() == emailInput.value.toLowerCase() &&
-      Users[index].password.toLowerCase() == passwordInput.value.toLowerCase()
+      Users[index].password.toLowerCase() ==
+        passwordInput.value.toLowerCase() &&
+      Users[index].role.toLowerCase() == "customer"
     ) {
-      localStorage.setItem("sessionUserName", Users[index].name);
-      loginBtn.setAttribute("href", "home.html");
-    } else {
-      IncorrectMessage.classList.remove("d-none");
+      IncorrectMessage.classList.add("d-none");
+      setTimeout(() => {
+        window.location = "home.html";
+      }, 1000);
     }
-  }
-}
+    if (
+      Users[index].email.toLowerCase() == emailInput.value.toLowerCase() &&
+      Users[index].password.toLowerCase() ==
+        passwordInput.value.toLowerCase() &&
+      Users[index].role.toLowerCase() == "admin"
+    ) {
+      IncorrectMessage.classList.add("d-none");
+      setTimeout(() => {
+        window.location = "dashoard.html";
+      }, 1000);
+    }
 
-//*******************Welcome******************* */
-function displayWelcome() {
-  document.getElementById("welcome").innerHTML = "Welcome" + " " + username;
+  }
+
 }
